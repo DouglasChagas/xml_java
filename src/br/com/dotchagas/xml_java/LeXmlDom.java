@@ -13,11 +13,16 @@ import org.xml.sax.SAXException;
 
 import br.com.dotchagas.xml_java.model.Produto;
 
-public class Sistema {
+public class LeXmlDom {
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		
+		factory.setValidating(true);
+		factory.setNamespaceAware(true);
+		factory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaLanguage", "http://www.w3.org/2001/XMLSchema");
+		
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse("src/venda.xml");
 

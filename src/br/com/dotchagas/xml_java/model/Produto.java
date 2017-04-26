@@ -10,7 +10,11 @@ public class Produto {
         this.preco = preco;
     }
 
-    public String getNome() {
+    public Produto() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getNome() {
         return this.nome;
     }
 
@@ -22,4 +26,15 @@ public class Produto {
     public String toString() {
         return "Nome:"+ this.nome + "\n Preço:" + this.preco +"\n";
     }
+
+	public void setNome(String string) {
+		// TODO Auto-generated method stub
+		nome = string;
+		
+	}
+
+	public void setPreco(double parseDouble) {
+		// TODO Auto-generated method stub
+		preco = parseDouble;
+	}
 }
